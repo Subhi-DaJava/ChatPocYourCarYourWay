@@ -1,13 +1,11 @@
-package com.openclassrooms.yourcaryourway.back;
+package com.openclassrooms.yourcaryourway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackApplication {
-
+public class ChatApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BackApplication.class, args);
+        SpringApplication.run(ChatApplication.class, args);
     }
-
 }
