@@ -25,7 +25,7 @@
       <h3>Conversations History</h3>
       <mat-list class="conversation">
         <mat-list-item class="mat-list-item-con">
-          <p>What's the PoC</p>
+          <p>What's the PoC ?</p>
         </mat-list-item>
       </mat-list>
     </div>
@@ -35,9 +35,9 @@
                      [ngClass]="{'left': item.message_side === 'receiver', 'right': item.message_side === 'sender'}">
         <div class="avatar">
           <img *ngIf="item.message_side === 'sender' && getUserRole() === 'user'" ngSrc="assets/user.jpg" alt="user" height="50" width="50">
-          <img *ngIf="item.message_side === 'sender' && getUserRole() === 'admin'" ngSrc="assets/service.jpg" alt="service" height="50" width="50">
+          <img *ngIf="item.message_side === 'sender' && getUserRole() === 'service'" ngSrc="assets/service.jpg" alt="service" height="50" width="50">
           <img *ngIf="item.message_side === 'receiver' && getUserRole() === 'user'" ngSrc="assets/service.jpg" alt="service" height="50" width="50">
-          <img *ngIf="item.message_side === 'receiver' && getUserRole() === 'admin'" ngSrc="assets/user.jpg" alt="user" height="50" width="50">
+          <img *ngIf="item.message_side === 'receiver' && getUserRole() === 'service'" ngSrc="assets/user.jpg" alt="user" height="50" width="50">
         </div>
         <div class="text_wrapper">
           <div class="text">{{ item.messageContent }}</div>

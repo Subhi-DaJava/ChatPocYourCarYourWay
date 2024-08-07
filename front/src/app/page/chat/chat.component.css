@@ -128,11 +128,6 @@ mat-toolbar {
   margin-left: 20px;
 }
 
-.messages .message.left .text_wrapper::after,
-.messages .message.left .text_wrapper::before {
-  right: 100%;
-}
-
 .messages .message.left .text {
   color: #000000;
 }
@@ -158,28 +153,7 @@ mat-toolbar {
   display: inline-block;
   padding: 15px;
   border-radius: 8px;
-  min-width: 100px;
-}
-
-.messages .message .text_wrapper::after,
-.messages .message .text_wrapper:before {
-  top: 18px;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.messages .message .text_wrapper::after {
-  border-width: 13px;
-  margin-top: 0;
-}
-
-.messages .message .text_wrapper::before {
-  border-width: 15px;
-  margin-top: -2px;
+  min-width: 150px;
 }
 
 .messages .message .text_wrapper .text {

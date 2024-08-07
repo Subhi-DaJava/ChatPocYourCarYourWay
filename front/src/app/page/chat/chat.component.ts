@@ -59,8 +59,8 @@ export class ChatComponent implements OnInit {
   getUserRole(): string {
     if (this.user === 'user') {
       return 'user';
-    } else if (this.user === 'admin') {
-      return 'admin';
+    } else if (this.user === 'service') {
+      return 'service';
     } else {
       return this.user;
     }
@@ -71,12 +71,15 @@ export class ChatComponent implements OnInit {
       messageContent: this.messageInput,
       user: this.user
     } as Message;
-    this.websocketService.sendMessage( chatMessage, "Chat_Boot");
+    if(!chatMessage.messageContent || chatMessage.messageContent.trim() == '') {
+      return;
+    }
+    this.websocketService.sendMessage(chatMessage, "Chat_Boot");
     this.refreshScroll();
     this.messageInput = '';
   }
   handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === 'Enter' || event.key === '') {
       this.sendMessage();
     }
   }
