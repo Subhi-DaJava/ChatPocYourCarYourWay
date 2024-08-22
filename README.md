@@ -70,4 +70,4 @@ This project is a web application built using Angular for the frontend and Sprin
    Open your browser and navigate to `http://localhost:4200` to access the chat interface for a user.
 
 3. **Service Endpoint:**
-   For accessing the service endpoint, navigate to `http://localhost:4200/service`.
+   For accessing the service endpoint, navigate to `http://localhost:4200/chat/service`.
